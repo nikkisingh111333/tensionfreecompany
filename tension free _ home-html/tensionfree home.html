@@ -166,8 +166,44 @@
         transform: translateY(-40px);
       }
 
-      from {
+      to {
         transform: translateY(20px);
+      }
+    }
+    #shopcart{
+      animation: cart 1.5s ease-in-out alternate infinite;
+    }
+    @keyframes cart {
+      from {
+        transform: translateX(25px);
+      }
+
+      to {
+        transform: translateX(0px) rotate(2deg);
+      }
+    }
+    #dollarsign{
+      animation: dollar 1.7s ease-in-out alternate infinite;
+    }
+    #card{
+      animation: card 1.7s ease-in-out alternate infinite;
+    }
+    @keyframes card {
+      from {
+        transform: translateX(25px);
+      }
+
+      to {
+        transform: translateX(-30px) rotate(2deg);
+      }
+    }
+    @keyframes dollar {
+      from {
+        transform: translateY(-20px);
+      }
+
+      to {
+        transform: translateY(20px) ;
       }
     }
   </style>
