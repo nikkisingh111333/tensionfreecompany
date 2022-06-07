@@ -3,11 +3,16 @@
 <html lang="en">
 
 <head>
-  <title>tension free | home</title>
+  <title>TFC | Welcomes You</title>
   <meta property="og:title" content="tension free | home" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta charset="utf-8" />
+  <link rel="icon" href="./public/playground_assets/titlelogo.jpg" type="image/jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script data-brackets-id='79' src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js" integrity="sha512-0bCDSnaX8FOD9Mq8WbHcDwshXwCB5V4EP+UBu87WQgga2b7lAsuEbaSmIZjH/XEmNhJuhrPbFHemre5HZwrk9w==" crossorigin="anonymous"></script>
+  <script data-brackets-id='80' src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie_svg.min.js" integrity="sha512-dbFiej6dN6NDTJ8dPpy0QlgGFxeFjkaYDWIzY5PciK5O6ZKb9WwiQmTJ0BzzhS4fAved+0buPW45H9h+6SfgNQ==" crossorigin="anonymous">
+  </script>
+  <script data-brackets-id='81' src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js" integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -148,46 +153,74 @@
   <link data-brackets-id='73' rel="preconnect" href="https://fonts.gstatic.com">
   <link data-brackets-id='74' href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
   <link data-brackets-id='60' rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation-float.min.css" integrity="sha256-4ldVyEvC86/kae2IBWw+eJrTiwNEbUUTmN0zkP4luL4=" crossorigin="anonymous">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
   <style>
-    .under:hover {
-      transition: 0.5 all;
+    #qrcode {
+      transition: 0.5s all;
+      filter: blur(12px);
+    }
+
+    .close-button:hover {
+      transition: 0.6s all;
+      transform: rotate(-180deg);
+    }
+
+    .hidden {
+      display: none;
+      border: 1px solid turquoise;
+      padding: 10px;
+      width: 250px;
+    }
+
+    .huver:hover {
+      transition: 0.5s all;
+
       box-shadow:
         inset 0 -0.175em white,
         inset 0 -0.2em blue;
+      cursor: pointer;
     }
 
+    .under:hover {}
+
     #go_down {
-      animation: downnav 0.6s ease-in-out alternate infinite;
+      animation: downnav 0.9s ease-in-out alternate infinite;
     }
 
     @keyframes downnav {
       from {
-        transform: translateY(-40px);
+        transform: translateY(-30px);
       }
 
       to {
-        transform: translateY(20px);
+        transform: translateY(0px);
       }
     }
-    #shopcart{
-      animation: cart 1.5s ease-in-out alternate infinite;
+
+    #shopcart {
+      animation: cart 1.9s ease-in-out alternate infinite;
     }
+
     @keyframes cart {
       from {
-        transform: translateX(25px);
+        transform: translateY(-75px);
       }
 
       to {
-        transform: translateX(0px) rotate(2deg);
+        transform: translateY(0px) rotate(2deg);
       }
     }
-    #dollarsign{
+
+    #dollarsign {
       animation: dollar 1.7s ease-in-out alternate infinite;
     }
-    #card{
+
+    #card {
       animation: card 1.7s ease-in-out alternate infinite;
     }
+
     @keyframes card {
       from {
         transform: translateX(25px);
@@ -197,13 +230,32 @@
         transform: translateX(-30px) rotate(2deg);
       }
     }
+
     @keyframes dollar {
       from {
         transform: translateY(-20px);
       }
 
       to {
-        transform: translateY(20px) ;
+        transform: translateY(20px);
+      }
+    }
+
+    #terms {
+      animation: terms 0.8s ease-in-out alternate infinite
+    }
+
+    @keyframes terms {
+      from {
+        transform: scale(2.5, 2.5);
+        -webkit-box-shadow: 0px 0px 0px 2px rgba(155, 155, 255, 0.2);
+        box-shadow: 0px 0px 0px 2px rgba(155, 155, 255, 0.2);
+      }
+
+      to {
+        -webkit-box-shadow: 0px 0px 5px 3px #DA0037;
+        box-shadow: 0px 0px 5px 3px #DA0037;
+        transform: scale(2.0, 2.0);
       }
     }
   </style>
@@ -240,8 +292,8 @@
       line-height: 20px;
       letter-spacing: 0.5px;
       margin: 10px 0 30px;
-      position:relative;
-      left:15%;
+      position: relative;
+      left: 15%;
     }
 
     .login-span {
@@ -266,7 +318,7 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       transition: transform 80ms ease-in;
-      cursor:pointer;
+      cursor: pointer;
     }
 
     .login-button:active {
@@ -283,7 +335,7 @@
     }
 
     .login-form {
-      background-color: rgba(20,20,20,1);
+      background-color: rgba(20, 20, 20, 1);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -412,7 +464,7 @@
 
     .overlay-left {
       transform: translateX(-20%);
-        /* background:rgba(50,0,20,0.5); */
+      /* background:rgba(50,0,20,0.5); */
     }
 
     .container.right-panel-active .overlay-left {
@@ -442,10 +494,11 @@
       height: 40px;
       width: 40px;
     }
-    .login-a:hover{
-      transition:0.6s all;
+
+    .login-a:hover {
+      transition: 0.6s all;
       filter: invert(60%);
-      transform:scale(1.2,1.2) rotate(10deg);
+      transform: scale(1.2, 1.2) rotate(10deg);
     }
   </style>
 
@@ -457,7 +510,7 @@
 
     <div class="home-container">
       <header id="header" data-role="Header" class="home-header">
-        <img alt="logo" src="public/playground_assets/we%20connect-1500h.png" class="home-image" />
+        <img alt="logo" data-toggle="WeConnect_Pay" src="public/playground_assets/we%20connect-1500h.png" class="home-image" />
         <div class="home-icon-group">
           <div data-type="BurgerMenu" class="home-burger-menu">
             <svg viewBox="0 0 1024 1024" class="home-icon">
@@ -501,7 +554,7 @@
           </div>
         </div>
         <img alt="logo" src="public/playground_assets/logo%20tf-200h.png" class="home-image02" />
-        <img alt="logo" src="public/playground_assets/tfc%20mart%5B1%5D-200h.png" class="home-image03" />
+        <a href="TFC_mart.html"> <img alt="logo" src="public/playground_assets/tfc%20mart%5B1%5D-200h.png" class="home-image03" /></a>
       </header>
       <div id="intro section" class="home-intro-section">
         <span class="home-text">
@@ -895,7 +948,7 @@
       <div id="india section" class="home-india-section">
         <img id="slogan" alt="image" src="public/playground_assets/dil%20se%20india-600w.png" class="home-indiaflag" data-aos-id="slogan" data-aos="flip-right" data-aos-delay="10" data-aos-offset="300" data-aos-duration="500"
           data-aos-easing="ease-in-quart" />
-        <svg id="indiamap_graphic" style="transform:scale(0.5,0.5) translateY(50px)" width="1113" height="1327" viewBox="0 0 1113 1327" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg id="indiamap_graphic" style="transform:scale(0.55,0.55) translateY(90px)" width="1113" height="1327" viewBox="0 0 1113 1327" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path id="india_map" fill-rule="evenodd" clip-rule="evenodd"
             d="M356.136 1323.89H348.317C343.859 1321.57 338.534 1320.23 335.128 1316.72C328.305 1309.7 322.1 1301.83 316.469 1293.64C312.27 1287.53 308.413 1280.74 306.133 1273.61C302.85 1263.35 301.538 1252.37 298.669 1241.92C292.788 1220.51 286.686 1199.16 280.143 1177.98C277.662 1169.95 273.879 1162.35 270.328 1154.76C269.319 1152.6 266.917 1151.26 265.359 1149.34C261.624 1144.76 256.963 1140.61 254.58 1135.29C250.375 1125.9 247.324 1115.86 244.291 1105.92C241.943 1098.22 240.49 1090.21 238.4 1082.41C236.67 1075.95 234.893 1069.92 234.932 1062.7C234.975 1055.22 233.975 1046.16 227.314 1040.36C226.798 1039.92 226.902 1038.65 226.692 1037.78C225.308 1031.99 224.077 1026.16 222.477 1020.44C221.14 1015.67 219.245 1011.37 213.936 1009.94C212.835 1009.64 212.23 1006.46 211.739 1004.5C211.37 1003.04 211.969 1001.21 211.417 999.901C207.695 991.056 203.853 982.267 199.906 973.535C196.421 965.825 191.601 958.566 189.468 950.464C187.084 941.413 186.979 931.647 186.028 922.175C184.313 905.09 184.876 887.307 180.482 871.08C175.483 852.616 175.428 833.807 172.392 815.297C170.68 804.859 170.015 794.025 170.422 783.439C170.747 774.971 171.222 764.873 175.509 758.581C182.941 747.676 182.48 736.231 178.58 724.599C177.2 720.486 177.04 715.792 176.873 711.341C176.74 707.784 178.809 704.269 175.413 700.865C174.114 699.564 174.421 696.152 174.369 693.692C174.256 688.103 174.424 682.507 174.346 676.917C174.334 675.987 173.773 674.372 173.268 674.276C171.827 673.999 169.223 673.852 168.958 674.524C167.489 678.229 165.454 682.266 165.665 686.056C166.893 708.081 160.84 718.29 141.529 725.502C137.276 727.09 133.23 729.379 128.922 730.723C122.394 732.762 115.796 735.02 109.09 735.808C98.2766 737.08 89.873 730.486 82.8305 722.898C70.3232 709.418 58.3589 695.32 46.6372 681.03C41.6477 674.949 37.7683 667.79 33.5216 661.02C30.838 656.742 33.0357 652.761 35.9793 650.705C37.3708 649.733 42.974 652.035 43.2197 653.52C44.705 662.494 50.0991 656.955 53.7456 657.301C55.6412 657.48 57.6584 657.064 59.5214 656.523C63.4779 655.378 68.8776 655.228 70.9163 652.368C73.6269 648.563 75.5161 647.606 79.3391 649.041C80.4101 649.443 82.4687 649.313 82.9625 648.567C86.919 642.6 90.6609 636.463 94.3074 630.265C94.6914 629.611 94.3336 627.771 93.7595 627.328C93.1942 626.892 91.5029 627.15 91.0147 627.763C84.8795 635.469 75.7865 636.013 67.7128 638.436C62.9865 639.855 56.748 640.086 52.5386 637.867C43.1688 632.93 34.4336 626.44 25.8995 619.885C23.1301 617.758 21.7036 613.518 19.8096 610.148C16.416 604.112 15.3736 595.442 5.98634 596.304C5.03298 596.391 3.99932 595.454 3.00382 594.992V592.177C3.9039 590.323 5.22937 588.568 5.6325 586.594C7.23309 578.734 12.0531 577.247 18.6805 577.63C30.3689 578.304 30.3124 578.043 32.6787 565.513C32.9045 564.32 34.7715 562.515 35.736 562.612C43.3469 563.382 50.9443 564.399 58.5028 565.641C63.1678 566.407 68.1063 565.231 71.9102 570.602C75.1655 575.198 80.0841 574.231 84.7937 571.289C89.4102 568.405 94.3511 565.76 99.4653 564.299C103.267 563.214 108.365 562.045 109.086 569.746C109.212 571.099 114.823 573.645 115.885 572.773C119.175 570.073 124.68 568.22 122.826 561.453C122.442 560.052 122.6 557.582 123.443 556.836C127.565 553.188 124.673 550.54 122.925 547.342C116.907 536.344 109.62 525.945 109.14 512.275C109.088 510.803 105.806 508.537 103.807 508.222C89.9198 506.03 84.2347 493.905 91.3216 481.016C95.0746 474.19 92.1247 465.458 85.9076 466.267C78.0184 467.295 74.8156 460.245 69.5853 456.843C68.2542 455.976 67.7223 451.959 68.2455 449.792C70.4217 440.791 72.4095 431.568 82.1578 427.826C84.5885 426.893 86.5819 424.096 88.3439 421.773C91.3606 417.795 94.1261 413.583 96.8327 409.345C100.148 404.151 104.432 401.005 110.445 401.489C115.885 401.926 115.951 406.68 117.332 410.952C118.826 415.58 122.453 419.56 127.418 416.329C135.202 411.261 143.489 411.578 151.971 411.543C154.828 411.531 158.806 410.94 160.319 408.912C164.81 402.903 167.013 394.918 174.067 391.087C174.643 390.775 174.388 388.878 174.702 387.778C176.682 380.835 180.012 375.531 186.743 372.495C193.04 369.654 199.99 366.506 204.415 361.281C211.482 352.934 217.799 343.244 219.282 331.457C220.375 322.771 224.124 319.447 232.282 319.991C238.807 320.426 243.809 311.474 242.586 304.316C242.159 301.826 243.174 298.119 244.806 296.315C250.703 289.801 257.225 283.954 263.337 277.658C265.963 274.954 268.316 272.194 266.99 267.283C266.297 264.722 267.959 261.472 268.347 258.501C268.806 254.982 270.415 250.585 269.09 248.06C266.11 242.387 268.597 238.378 271.974 236.115C277.504 232.411 281.905 225.673 289.945 227.214C293.816 227.955 296.568 225.63 297.098 221.014C297.571 216.879 297.037 213.653 292.461 212.564C287.645 211.418 282.974 208.92 278.156 208.625C273.731 208.355 272.539 206.638 273.676 202.769C274.892 198.623 273.103 196.257 269.952 196.587C262.702 197.345 259.297 191.188 254.33 187.799C252.378 186.467 250.23 184.985 248.031 184.653C241.903 183.731 238.286 180.432 238.007 173.668C237.846 169.785 238.65 165.826 238.276 161.986C236.981 148.623 235.068 135.323 234.068 121.94C233.814 118.537 235.305 112.69 237.342 111.869C241.31 110.271 244.346 109.353 245.062 104.187C245.224 103.003 247.628 101.446 249.083 101.338C254.831 100.91 258.46 97.2137 258.374 91.7769C258.334 89.2688 253.952 86.2293 250.995 84.5412C247.126 82.3329 244.861 79.6668 246.862 75.2183C248.885 70.72 246.326 71.5039 243.766 70.2494C238.28 67.5602 231.984 64.7783 228.502 59.9485C225.418 55.6734 222.829 53.8196 218.55 54.8466C213.654 56.022 209.638 54.4739 207.64 50.0546C205.042 44.3121 208.219 37.6458 212.975 34.213C217.349 31.0541 221.962 27.4942 224.863 22.9221C229.767 15.1936 235.961 14.304 243.518 15.7302C246.768 16.3433 250.139 16.2059 253.456 16.4094C253.634 15.835 253.812 15.2597 253.99 14.6844C252.212 13.1226 250.436 11.5607 248.657 9.99976C248.617 9.08189 248.575 8.16488 248.534 7.24701C260.776 13.7605 271.076 7.25389 281.86 3.99541H288.375C294.092 5.24642 299.765 6.93191 305.539 7.59734C309.498 8.05413 311.684 8.94538 311.283 13.8086C311.206 14.7454 313.401 16.9435 314.145 16.7503C319.99 15.2314 324.267 18.4315 325.575 23.4639C328.928 36.3707 340.744 38.027 348.599 44.7337C351.806 47.471 354.986 49.0835 355.234 53.8635C355.519 59.3887 358.342 60.9025 363.264 61.6933C368.336 62.5081 373.341 65.0762 377.872 67.8384C379.401 68.7718 379.394 72.645 380.089 75.1745C379.834 76.0297 379.579 76.8849 379.323 77.7401C388.424 74.9195 397.496 71.9899 406.632 69.3118C415.026 66.8519 422.161 59.3552 431.765 61.8221C435.128 62.6858 437.77 62.9168 440.426 59.4239C441.414 58.1248 445.317 58.7121 447.63 59.4282C452.947 61.0742 458.075 64.8719 463.33 64.9818C471.679 65.1544 474.323 72.7206 479.617 76.7381C480.243 77.212 480.446 78.9782 480.233 79.9966C478.634 87.6366 477.474 95.4767 474.981 102.778C473.092 108.307 473.051 116.189 464.715 116.799C463.553 116.884 462.518 119.395 461.473 120.826C460.578 122.05 459.773 124.405 458.896 124.423C452.888 124.545 453.721 129.508 453.256 133.349C452.159 142.42 448.134 145.714 439.725 144.097C432.953 142.795 432.233 143.864 434.125 151.369C435.178 155.543 438.771 159.655 432.633 163.766C429.376 165.948 433.054 173.676 437.869 175.141C439.946 175.772 442.326 175.571 444.19 176.57C445.596 177.324 447.599 180.235 447.295 180.736C443.054 187.699 447.917 191.953 450.942 196.861C453.097 200.357 454.65 203.745 449.865 206.784C445.07 209.829 439.884 212.809 436.242 217.158C431.326 223.028 428.175 220.085 424.743 216.186C423.459 214.727 423.033 212.408 421.803 210.866C420.874 209.702 418.98 208.195 418.066 208.54C416.597 209.095 414.353 211.366 414.571 212.37C416.198 219.844 418.409 227.167 420.322 234.571C421.984 241.014 423.78 247.44 424.961 253.991C425.624 257.664 425.16 261.574 425.223 267.144C433.596 258.854 436.804 259.678 440.425 268.638C441.11 270.336 441.673 272.243 442.793 273.556C446.552 277.961 448.79 285.462 456.908 281.594C458.102 281.025 460.572 283.311 462.336 284.482C464.129 285.673 465.976 286.904 467.444 288.5C470.14 291.433 472.596 294.625 475.107 297.753C476.155 299.06 477.061 301.642 478.073 301.666C487.473 301.891 493.336 309.355 500.417 314.165C503.448 316.225 505.836 318.123 501.044 323.038C494.448 329.807 484.264 334.658 484.67 347.33C484.703 348.34 482.887 349.295 482.275 350.483C481.452 352.078 479.975 354.459 480.496 355.489C483.367 361.159 480.052 364.852 477.554 368.963C475.895 371.693 474.677 374.762 472.85 377.339C470.675 380.41 470.927 382.25 473.758 384.867C476.715 387.601 479.009 390.274 483.308 387.929C484.28 387.398 486.19 388.227 487.399 388.954C493.969 392.9 500.521 396.893 506.929 401.131C509.023 402.514 510.528 404.895 512.543 406.459C519.701 412.018 526.385 419.771 534.388 422.067C539.811 423.623 545.486 425.023 550.446 427.704C554.212 429.739 557.197 432.125 561.772 430.661C562.992 430.271 566.238 432.605 566.456 434.055C567.307 439.705 571.511 439.608 574.989 440.957C578.669 442.385 582.288 444.005 586.009 445.288C587.021 445.637 588.873 445.549 589.366 444.855C592.975 439.793 597.283 441.636 601.797 442.692C604.71 443.373 607.865 443.3 610.863 442.998C614.685 442.613 618.644 440.528 622.208 441.211C627.439 442.214 632.404 444.931 637.402 447.132C638.454 447.595 640.011 449.141 639.889 449.927C638.321 460.045 643.639 463.259 651.592 464.16C652.334 464.244 652.945 465.304 653.696 465.752C659.67 469.307 664.861 476.232 672.691 468.182C675.851 464.933 679.793 466.784 679.639 472.792C679.53 477.023 681.304 480.431 685.313 478.727C694.552 474.797 703.093 477.267 711.062 481.636C716.553 484.648 720.545 485 724.841 480.057C727.138 477.415 729.01 476.658 730.88 481.362C731.795 483.668 735.928 486.136 738.263 485.795C743.492 485.032 756.147 482.802 761.269 483.129C761.999 483.175 762.94 482.199 763.526 481.459C764.829 479.811 766.263 478.164 767.111 476.243C768.615 472.841 770.748 469.788 768.288 465.332C763.49 456.637 759.649 447.367 762.386 436.784C763.81 431.282 767.691 425.468 766.811 420.559C765.254 411.877 770.499 411.639 774.941 409.507C777.301 408.372 779.552 406.912 781.988 406.034C783.624 405.444 785.64 405.064 787.239 405.547C794.334 407.688 797.729 416.848 794.547 426.045C792.831 431.002 791.741 435.259 795.812 439.552C796.613 440.397 795.779 442.953 795.86 444.711C796.027 448.391 794.997 453.61 796.819 455.407C800.164 458.709 805.113 460.312 809.594 462.005C812.401 463.063 816.002 462.126 818.507 463.574C829.591 469.982 839.585 464.511 848.395 459.059C853.376 455.976 856.44 455.574 861.119 457.698C864.593 459.273 868.468 460.925 872.101 460.773C882.75 460.325 893.395 459.24 903.982 457.87C907.472 457.418 910.693 454.742 914.192 454.138C919.107 453.291 918.41 450.075 916.2 448.034C912.537 444.652 912.952 441.751 914.694 437.607C916.65 432.953 914.016 430.131 909.204 431.151C908.354 431.331 907.355 432.05 906.707 431.766C903.76 430.473 899.854 429.683 898.321 427.231C896.702 424.645 896.575 420.132 897.42 416.965C897.801 415.537 902.081 415.118 904.656 414.632C907.092 414.172 909.725 414.668 912.069 413.959C916.691 412.562 921.382 411.071 925.647 408.761C928.945 406.974 934.461 403.127 934.091 401.5C932.73 395.533 935.84 393.476 939.22 390.99C944.81 386.882 950.427 382.999 950.625 374.325C950.662 372.734 953.461 370.184 955.271 369.839C968.457 367.331 977.026 358.395 984.878 347.474C988.773 342.057 994.317 337.56 999.939 334.307C1001.94 333.148 1006.32 337.068 1009.72 338.322C1011.3 338.904 1013.16 338.516 1014.85 338.81C1018 339.357 1021.37 339.486 1024.2 340.868C1028.69 343.065 1029.79 340.772 1032.54 337.206C1037.61 330.65 1044.24 325.385 1050.75 320.386C1051.5 319.807 1055.54 324.444 1058.21 326.422C1059.2 327.159 1061.26 326.799 1061.74 327.653C1062.57 329.151 1063.25 331.476 1062.74 332.948C1062.05 334.938 1060.17 336.449 1058.81 338.165C1059 338.728 1059.19 339.289 1059.38 339.851C1065.52 335.154 1070.1 335.275 1072.14 343.52C1072.29 344.116 1072.93 344.666 1073.46 345.038C1076.78 347.372 1075.77 349.557 1073.9 352.563C1071.25 356.852 1069.31 361.655 1067.06 366.24C1067.58 366.616 1068.09 366.992 1068.61 367.367C1073.19 362.771 1077.92 359.454 1084.13 364.035C1085 364.68 1086.66 363.954 1087.9 364.174C1093.72 365.2 1100.7 361.399 1104.99 368.822C1106.51 371.455 1107.88 374.195 1109.31 376.886V386.736C1102.06 385.307 1100.13 392.512 1096.25 396.372C1092.67 399.944 1092.81 404.125 1096.24 408.108C1098.75 411.021 1101.3 413.948 1103.38 417.201C1104.13 418.36 1104.02 420.745 1103.41 422.092C1103.07 422.821 1100.49 423.194 1099.54 422.593C1096.72 420.815 1094.24 418.421 1091.56 416.373C1090.36 415.46 1088.66 413.817 1087.77 414.178C1079.95 417.324 1071.89 420.134 1064.69 424.538C1060.52 427.086 1058.05 432.678 1054.37 436.379C1048.81 441.969 1042.75 446.976 1037.1 452.477C1033.95 455.553 1029.93 458.942 1032.93 464.302C1037.14 471.835 1035.25 478.294 1031.36 485.053C1029.59 488.114 1027.74 491.962 1027.94 495.314C1028.31 501.571 1026.82 505.489 1021.38 508.191C1017.86 509.942 1017.46 516.139 1020.13 518.294C1026.74 523.63 1027.38 527.486 1023.17 534.924C1016.36 546.959 1010.67 559.426 1009.06 573.749C1008.16 581.736 1006.98 582.115 1000.48 578.593C999.519 578.074 998.421 577.512 997.4 577.534C991.51 577.661 985.622 578.193 979.738 578.123C974.843 578.066 975.669 579.866 977.332 583.438C982.493 594.522 983.62 606.195 980.221 618.146C979.231 621.627 978.352 625.614 973.557 625.335C972.9 625.297 971.491 626.736 971.588 627.222C972.926 633.921 974.896 640.506 975.793 647.261C976.331 651.311 976.056 655.945 974.683 659.691C973.552 662.773 969.856 664.637 968.035 667.575C965.483 671.692 963.402 671.937 960.563 668.118C959.763 667.044 957.711 665.519 957.395 665.789C949.938 672.155 950.526 663.635 950.201 660.562C949.023 649.419 945.808 639.208 940.959 629.366C939.388 626.178 938.936 622.264 938.346 618.613C937.245 611.808 936.562 604.922 935.316 598.153C935.141 597.197 932.56 595.836 931.456 596.15C924.29 598.185 917.873 609.241 919.98 616.755C921.607 622.557 919.113 626.095 916.143 629.965C913.915 632.868 911.904 633.024 909.969 629.846C907.927 626.492 906.029 623.035 904.082 619.649C904.082 620.149 904.188 620.826 904.064 621.45C903.515 624.229 902.9 626.992 902.31 629.761C900.825 627.291 898.916 625 897.942 622.314C895.609 615.875 893.916 609.164 891.579 602.727C889.818 597.878 893.654 581.627 897.689 578.78C898.388 578.287 899.261 578.076 900.06 577.75C906.129 575.268 913.204 574.146 918.037 569.989C925.157 563.864 932.862 556.831 930.679 544.636C930.573 544.042 932.624 542.447 933.788 542.281C935.164 542.084 936.669 542.937 938.919 543.554C932.243 533.65 924.859 530.929 915.076 533.988C913.22 534.569 911.318 535.427 909.44 535.416C893.509 535.325 877.561 535.457 861.654 534.66C855.078 534.33 848.627 530.975 842.054 530.679C835.425 530.38 834.068 527.095 833.867 521.04C833.599 512.951 832.859 504.872 832.059 496.819C831.9 495.232 830.544 493.783 829.74 492.271C828.504 493.472 826.694 494.421 826.128 495.919C823.598 502.606 819.139 501.997 814.4 499.74C809.751 497.527 805.563 494.799 805.14 488.243C805.03 486.548 803.041 484.998 801.915 483.381C802.348 487.444 807.895 492.227 798.553 491.856C796.776 491.786 794.882 495.118 792.061 497.822C791.436 494.323 791.462 490.92 790.142 488.309C789.253 486.551 786.464 485.914 784.524 484.775C781.459 492.101 773.022 495.489 772.338 504.719C772.063 508.424 771.857 510.522 775.947 512.031C779.032 513.168 781.365 516.72 783.992 519.243C785.249 520.45 786.441 522.879 787.615 522.844C793.325 522.676 798.238 524.149 802.074 528.89C803.054 530.101 804.663 531.438 804.671 532.727C804.71 539.314 799.92 539.099 795.865 539.041C790.77 538.969 786.82 539.007 785.631 546.321C785.134 549.381 783.352 556.562 776.792 552.301C776.521 552.125 775.367 553.066 774.934 553.724C770.741 560.109 771.798 566.108 778.262 570.208C781.96 572.552 785.963 574.619 790.074 575.857C799.981 578.839 802.839 589.017 795.838 597.498C791.512 602.742 791.392 606.381 796.552 609.87C800.536 612.564 802.239 615.041 800.14 619.939C799.074 622.424 799.182 624.487 802.866 624.01C808.61 623.267 811.017 625.065 806.803 631.096C806.232 631.914 806.041 633.419 806.27 634.45C807.799 641.306 809.659 648.079 811.082 654.959C812.733 662.935 814.501 670.937 815.351 679.034C815.949 684.722 813.218 690.752 817.134 696.226C817.437 696.651 815.103 699.274 813.994 700.875C809.111 696.139 807.298 701.624 804.415 705.052C802.863 701.254 801.917 696.313 797.547 702.122C796.78 703.14 791.858 702.066 790.358 700.39C789.181 699.076 790.241 695.329 790.485 692.682C790.587 691.567 791.148 690.501 791.5 689.412C790.233 689.656 788.513 689.42 787.776 690.228C784.797 693.494 783.698 692.066 782.549 688.549C780.693 682.868 777.753 683.775 774.743 687.554C772.913 689.85 771.483 692.592 769.413 694.572C764.708 699.074 759.75 703.271 754.799 707.46C754.296 707.885 753.118 707.504 752.284 707.328C743.993 705.569 739.359 711.583 735.072 717.385C731.194 722.634 732.697 728.435 735.573 733.842C736.438 735.466 736.967 737.425 738.139 738.71C741.988 742.932 739.826 746.24 736.918 749.321C735.394 750.937 733.207 751.849 731.768 753.527C730.686 754.786 729.456 757.007 729.792 758.371C730.958 763.124 728.726 765.172 725.37 767.211C722.039 769.236 717.503 771.135 716.167 774.375C712.717 782.738 706.143 784.328 699.284 786.864C682.307 793.143 665.321 799.558 655.723 818.184C653.042 823.387 649.126 827.907 645.473 832.457C639.989 839.287 633.182 845.176 628.911 852.762C625.16 859.422 620.049 862.89 614.489 866.915C606.739 872.524 597.509 876.603 593.844 887.441C592.927 890.157 589.861 893.211 587.285 893.883C575.952 896.841 568.442 906.027 559.498 912.82C558.189 913.814 557.271 916.826 557.581 918.621C558.468 923.759 555.3 936.54 551.806 938.661C547.288 941.406 542.797 944.444 537.937 946.206C535.032 947.26 531.402 945.692 528.172 946.059C523.716 946.565 517.739 946.179 515.254 949.045C510.452 954.588 507.936 962.366 503.825 968.73C502.406 970.927 499.166 972.116 496.539 972.84C495.634 973.089 493.34 970.748 492.933 969.205C491.641 964.301 489.217 965.605 485.959 966.578C477.15 969.206 473.629 977.271 470.426 984.832C467.558 991.603 464.411 998.824 467.046 1007.1C470.201 1017.01 473.642 1027.12 468.483 1037.62C468.132 1038.33 468.445 1039.46 468.544 1040.39C469.852 1052.62 469.753 1065.3 472.869 1076.97C476.464 1090.42 470.693 1101.69 468.736 1113.78C467.852 1119.25 464.92 1125.04 461.398 1129.17C452.66 1139.42 451.293 1151.8 451.755 1164.44C452.343 1180.52 454.383 1196.53 455.393 1212.61C456.039 1222.89 455.64 1223.02 445.906 1222.61C443.538 1222.51 441.175 1222.15 438.822 1221.81C432.117 1220.82 429.839 1222.96 429.436 1230.45C429.356 1231.94 429.047 1233.63 428.29 1234.81C425.213 1239.6 421.452 1243.96 418.869 1249.03C417.052 1252.59 414.75 1259.01 416.17 1260.68C418.821 1263.79 424.135 1265.97 428.13 1265.63C433.413 1265.18 433.698 1267.77 434.465 1271.87C430.037 1271.01 426.083 1270.19 422.11 1269.49C410.947 1267.55 401.633 1274.53 391.548 1277.48C386.461 1278.97 382.555 1283.33 382.269 1291.48C381.931 1301.13 379.801 1311.46 368.337 1315.05C363.856 1316.46 360.178 1320.85 356.136 1323.89L356.136 1323.89Z"
             stroke="white" stroke-width="6" />
@@ -908,71 +961,85 @@
 
     </div>
   </div>
-  <footer id="footer" class="home-footer">
-    <div class="home-container11">
-      <div class="home-logo">
-        <img alt="logo" src="public/playground_assets/tfcmart%20white-200h.png" class="home-image20" />
-        <p class="home-text109">
-          <span>
+  <div class="t-f-c-mart05427-container1" style="transform:translateY(40px) scale(1.0,1.2)">
+    <footer class="t-f-c-mart05427-footer">
+      <div class="t-f-c-mart05427-container2" style="transform:translateY(50px)">
+        <div class="t-f-c-mart05427-logo">
+          <img alt="logo" src="public/playground_assets/tfcmart%20white-200h.png" class="t-f-c-mart05427-image5" />
+          <p id="logo_text" class="t-f-c-mart05427-text23">
             <span>
-              TFC is a complete package of Marketing &amp; Consultation
-              services helps our clients in India and Global, making them
-              relax and tension free.
-            </span>
-          </span>
-        </p>
-      </div>
-      <div class="home-links-container">
-        <div class="home-container12">
-          <div class="home-container13">
-            <div class="home-product-container">
-              <span class="home-text112 ">Legal</span>
-              <span class="home-text113 under">Consumers terms</span>
-              <span class="home-text114 under">
-                <span class="home-text115 ">Cancellation &amp;</span>
-                <br />
-                <span class="home-text117 ">Refund policy</span>
+              <span class="t-f-c-mart05427-text25">
+                TFC is a complete package of Marketing &amp; Consultation
+                services helps our clients in India and Global, making
+                them relax and tension free.
               </span>
-              <span class="home-text118 under">Merchant terms</span>
-              <span class="home-text119 under"><span>Term of use</span></span>
-            </div>
-            <span class="home-text121 under" style="transform:translateY(30px)"><span>Privacy Policy</span></span>
-          </div>
-          <div class="home-company-container">
-            <span class="home-text123 ">Company</span>
-            <span class="home-text124 under">About Us</span>
-            <span class="home-text125 under">Join Us</span>
-          </div>
-        </div>
-        <div class="home-container14">
-          <div class="home-contact">
-            <span class="home-text126"><span>Get Help</span></span>
-            <span class="home-text128">
-              <span>Call-9625-512-429</span>
-              <br />
-              <span>Email-</span>
-              <br />
-              <span>support@tensionfreecompany.com</span>
             </span>
+          </p>
+        </div>
+        <div class="t-f-c-mart05427-links-container">
+          <div class="t-f-c-mart05427-container3">
+            <div class="t-f-c-mart05427-product-container">
+              <span class="t-f-c-mart05427-text26">Legals</span>
+              <a href=""><span class="t-f-c-mart05427-text27 huver">Privacy Policy</span></a>
+              <a href=""><span class="t-f-c-mart05427-text28 huver">Merchant Terms</span></a>
+              <a href=""><span class="t-f-c-mart05427-text29 huver">Consumer Terms</span></a>
+              <a href=""><span class="t-f-c-mart05427-text30 huver">
+                  <span>Cancellation &amp; Refund</span>
+                  <br />
+                  <span>Policy</span>
+                </span></a>
+              <a href=""><span class="t-f-c-mart05427-text34 huver">
+                  <br />
+                  <span>Terms of Use</span>
+                </span></a>
+            </div>
+            <div class="t-f-c-mart05427-company-container">
+              <span class="t-f-c-mart05427-text37">Company</span>
+              <a href="aboutus.html"><span class="t-f-c-mart05427-text38 huver">About Us</span></a>
+              <a href=""><span class="t-f-c-mart05427-text39 huver">Careers</span></a>
+              <a href=""><span class="t-f-c-mart05427-text40 huver">
+                  <span>Join Us</span>
+                  <span></span>
+                </span></a>
+            </div>
+          </div>
+          <div class="t-f-c-mart05427-container4">
+            <div class="t-f-c-mart05427-contact">
+              <span class="t-f-c-mart05427-text43">Contact Us</span>
+              <p class="t-f-c-mart05427-text44">
+                <span>Call-9625-512-429</span>
+                <br />
+                <span>Email-</span>
+                <br />
+                <span>support@tensionfreecompany.com</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="home-separator"></div>
-    <img alt="image" src="public/playground_assets/msme-200h.png" class="home-image21" />
-    <p class="home-text134">
-      <span class="home-text135">
-        We would love to hear from you email us on-
-      </span>
-      <br />
-      <span class="home-text137">support@tensionfreecompany.com</span>
-    </p>
-  </footer>
-  <div class="full reveal" id="loginpage" style="height:700px;width:100%;background:rgba(0,0,0,0.8);backdrop-filter:blur(6px)" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
-  <!-- SIGNUP and login form -->
-    <div class="login-container" style="position:relative;top:20%;left:25%"  id="login-container">
+      <div class="t-f-c-mart05427-separator" style="transform:translateY(20px)"></div>
+      <p class="t-f-c-mart05427-text48" style="transform:translateY(-20px)">
+        <span class="t-f-c-mart05427-text49"></span>
+        <span class="t-f-c-mart05427-text50">
+          We would love to hear from you email us on-
+        </span>
+        <span></span>
+        <br />
+        <span class="t-f-c-mart05427-text53" style=""><strong>support@tensionfreecompany.com</strong></span>
+        <br />
+        <span></span>
+        <span></span>
 
-      <div class="form-container sign-up-container" >
+        <span class="t-f-c-mart05427-text58"></span>
+      </p>
+    </footer>
+    <img alt="image" src="public/playground_assets/msme-200h.png" class="t-f-c-mart05427-image6" />
+  </div>
+  <div class="full reveal" id="loginpage" style="height:700px;width:100%;background:rgba(0,0,0,0.8);backdrop-filter:blur(6px)" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+    <!-- SIGNUP and login form -->
+    <div class="login-container" style="position:relative;top:20%;left:25%" id="login-container">
+
+      <div class="form-container sign-up-container">
         <form class="login-form" action="#">
           <h1 class="login-h1" style="color:rgba(250,250,230,1.0)">Create Account</h1>
           <div class="social-container">
@@ -995,7 +1062,7 @@
             <a href="#" class="social login-a" style="background:url('public/playground_assets/google.svg');border-radius:55%;background-size:cover;background-repeat:no-repeat"><i class="fab fa-google-plus-g"></i></a>
 
           </div>
-          <span class="login-span" style="color:rgba(250,250,230,1.0)" >or use your account</span>
+          <span class="login-span" style="color:rgba(250,250,230,1.0)">or use your account</span>
           <input class="login-input" type="email" placeholder="Email" />
           <input class="login-input" type="password" placeholder="Password" />
           <a class="login-a" href="#" style="color:rgba(250,250,230,1.0)">Forgot your password?</a>
@@ -1007,7 +1074,7 @@
           <div class="overlay-panel overlay-left">
             <h1 class="login-h1" style="transform:translateX(50px)">Welcome Back!</h1>
             <p class="login-p">To keep connected with us please login with your personal info</p>
-            <button class="ghost login-button" style="transform:translateX(50px)"  id="signIn">Sign In</button>
+            <button class="ghost login-button" style="transform:translateX(50px)" id="signIn">Sign In</button>
             <button style="transform:scale(1.5,1.5) translateX(50px) ;color:black" class="close-button" data-close aria-label="Close reveal" type="button">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -1044,9 +1111,9 @@
       <img src="el4.jpeg" height="400" width="400" />
       <img src="el5.jpeg" height="400" width="400" />
     </div>
-      <button style="transform:scale(1.4,1.4)" class="close-button" data-close aria-label="Close reveal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
+    <button style="transform:scale(1.4,1.4)" class="close-button" data-close aria-label="Close reveal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
   <div onmouseover="pause(this)" onmouseout="resume(this)" class="reveal" id="Walletcheck" style="cursor:pointer;width:900px;overflow-x:hidden;background:rgba(0,0,0,0.8);backdrop-filter:blur(6px)" data-reveal data-close-on-click="true"
     data-animation-in="fade-in" data-animation-out="fade-out">
@@ -1066,7 +1133,64 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
+  <div class="full reveal" id="WeConnect_Pay" style="overflow:hidden;height:700px;width:100%;background:rgba(0,0,0,0.9);backdrop-filter:blur(15px)" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+    <!-- SIGNUP and login form -->
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+    <h5 style="content-align:center;"><input id="terms" type="checkbox" onclick="agree()" name="terms" value="on" style="color:white;position:relative;left:50%;transform:scale(2.0,2.0)">
+      <h5 style="color:lightyellow;transform:scale(0.8,0.8);border:0.5px solid #DA0037;border-radius:30px;text-align:center;font-style:mitr"><span style="font-size:35px;font-family: 'Source Code Pro', monospace;color:white">click above if you
+          agree,</span><br />
+        I Agree with all the terms & conditions ,I've read all payment & service related terms carefully, I understand that I'm choosing the services of <br /><span style="font-size:40px;color:#DA0037"><strong>tensionfreecompany.com</strong></span>
+      </h5>
+    </h5>
+    <h2 class="hidden"></h2>
+    <div class="grid-x grid-padding-x align-middle">
+      <div class="cell small-4">
+        <img id="qrcode" style="position:relative;left:10%;border-radius:20px" src="./public/playground_assets/TFC QR only.jpeg" height="300" width="400" />
+        <h3 style="color:lightyellow;text-align:center;margin-top:15px">Scan this & Pay Via UPI</h3>
+      </div>
+      <div class="cell small-4" style="color:lightyellow">
+        <p style="text-align:center;font-size:20px;font-family: 'Source Code Pro', monospace;">
+          In case of Credit Services, All payments needs to be paid as per schedule time.
+          First 14days trail and then 15th day 40% payment. You acknowledge that you will use Services on trail for 14days and then after Second installment after 45 and Final payment in 60 days of availing Services from Tension Free Company
+        </p>
+      </div>
+      <div class="cell small-4">
+        <div id="qranim" style="transform:scale(1.4,1.4);">
+
+        </div>
+      </div>
+    </div>
+    <button style="transform:scale(1.6,1.6);color:lightyellow" class="close-button" data-close aria-label="Close reveal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
   <script>
+    var qranim = document.getElementById("qranim")
+    var anim = bodymovin.loadAnimation({
+
+      wrapper: qranim,
+      animType: "svg",
+      loop: true,
+      hover: true,
+      autoplay: true,
+      path: "https://assets3.lottiefiles.com/packages/lf20_VBwuuR.json"
+    })
+
+    function agree() {
+      if ($('#terms').prop('checked')) {
+        $('#qrcode').css({
+          filter: 'blur(0px)'
+        });
+        //window.open('https://www.google.com', '_blank');
+      } else {
+        $('#qrcode').css({
+          filter: 'blur(10px)'
+        });
+        //return false;
+      }
+    }
     var one = simpleslider.getSlider({
       container: document.getElementById('eligg')
     });
