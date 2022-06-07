@@ -360,6 +360,9 @@
     text-align: center;
     transform:scale(0.7,0.7) translateX(-60px);
   }
+  .t-f-c-mart05427-company-container{
+    transform:translateX(-60px);
+  }
   .t-f-c-mart05427-footer {
     padding: var(--dl-space-space-unit);
   }
