@@ -91,3 +91,29 @@
   text-transform: none;
   text-decoration: none;
 }
+.about-us:hover{
+  transition:0.5s all;
+  background-color:darkred;
+  transform:translateX(20px) scale(0.7,0.7);
+  border:2px ridge darkred;
+}
+.about-us {
+  top: 82%;
+  left: 0px;
+  width: 283px;
+  cursor: pointer;
+  height: 73px;
+  position: absolute;
+  font-size: 30px;
+  transition: 0.3s;
+  font-family: Mitr;
+  border-radius: var(--dl-radius-radius-radius8);
+  background-color: black;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  border:2px ridge lightyellow;
+  transform: scale(0.7,0.7);
+  z-index:2;
+}

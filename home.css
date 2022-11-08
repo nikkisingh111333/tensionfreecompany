@@ -2064,14 +2064,6 @@
     font-size: 16px;
     text-align: left;
   }
-  .home-text008{
-    background:white;
-    color:gray;
-    width:100px;
-    transform:scale(0.6,0.6) translateY(-20px);
-    font-size:9px;
-    border-radius:7px 1px 1px 1px;
-  }
   .home-text009 {
     top: 108px;
     left: 0px;
@@ -2745,7 +2737,6 @@
     width: 423px;
     height: 271px;
     left:-5%;
-    
     transform:scale(0.7,0.7);
   }
   .home-india-section {
@@ -2801,7 +2792,7 @@
     top:30px;
   }
   #saratxt{
-    transform:translateX(60px) translateY(-120px);
+    transform:translateX(60px);
     font-family: 'Mitr';
     font-style: normal;
     font-weight: 700;
@@ -2813,7 +2804,7 @@
 
     height:300px;
     width:500px;
-    transform:scale(1.0,1.8) translateX(10px);
+    transform:scale(0.9,1.8) translateX(30px);
     object-fit:contain;
   }
   #footers{
